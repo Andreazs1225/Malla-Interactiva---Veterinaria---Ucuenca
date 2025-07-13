@@ -85,6 +85,16 @@ button#reset:hover {
   cursor: pointer;
   user-select: none;
   transition: background 0.3s, color 0.3s, transform 0.1s;
+  position: relative;
+}
+
+.subject input[type="number"] {
+  width: 50px;
+  padding: 2px;
+  margin-top: 6px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 0.9rem;
 }
 
 .subject.locked {
