@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <title>Malla Interactiva – Medicina Veterinaria</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Malla Interactiva – Medicina Veterinaria</h1>
-      <button id="reset">Reiniciar progreso</button>
-      <div class="legend">
-        <span class="legend-box completed"></span> Aprobada
-        <span class="legend-box unlocked"></span> Disponible
-        <span class="legend-box locked"></span> Bloqueada
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Veterinaria</title>
 
-    <main id="grid"></main>
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Malla curricular – Medicina Veterinaria</h1>
+    <p>
+      ✔️ Haz clic en una materia para marcarla como aprobada sin nota,  
+      o introduce tu calificación (≥ 60) y se aprobará automáticamente.  
+      Cuando todos los requisitos se aprueben, se desbloquearán las materias
+      encadenadas 🔓.
+    </p>
+  </header>
 
-    <script src="script.js"></script>
-  </body>
+  <!-- Contenedor donde el script inyecta la malla -->
+  <main id="malla"></main>
+
+  <script src="script.js"></script>
+</body>
 </html>
