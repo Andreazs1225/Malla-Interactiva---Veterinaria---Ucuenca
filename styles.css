@@ -1,0 +1,107 @@
+:root {
+  --locked-bg: #b0cbe0;
+  --unlocked-bg: #d0e8ff;
+  --completed-bg: #4a90e2;
+  --text-color: #013a63;
+  --completed-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f7fbff;
+  color: var(--text-color);
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+button#reset {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #4a90e2;
+  color: #fff;
+  cursor: pointer;
+}
+button#reset:hover {
+  background: #367bd6;
+}
+
+.legend {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.9rem;
+}
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #4a90e2;
+  display: inline-block;
+  margin-right: 4px;
+}
+.legend-box.completed {
+  background: var(--completed-bg);
+}
+.legend-box.unlocked {
+  background: var(--unlocked-bg);
+}
+.legend-box.locked {
+  background: var(--locked-bg);
+}
+
+#grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.cycle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cycle h2 {
+  flex-basis: 100%;
+  margin: 0 0 0.5rem 0;
+}
+
+.subject {
+  width: 200px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #4a90e2;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s, color 0.3s, transform 0.1s;
+}
+
+.subject.locked {
+  background: var(--locked-bg);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.subject.unlocked {
+  background: var(--unlocked-bg);
+}
+
+.subject.completed {
+  background: var(--completed-bg);
+  color: var(--completed-text);
+}
+
+.subject:not(.locked):hover {
+  transform: scale(1.05);
+}
